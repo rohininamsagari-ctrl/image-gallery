@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luminary Gallery — About</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====================================================
+       Navigation
+  ===================================================== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a class="nav__logo" href="index.html">Luminary<span>.</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="gallery.html" class="nav__cta">Explore</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <!-- ====================================================
+         About Hero
+    ===================================================== -->
+    <section class="about-hero container" aria-labelledby="about-title">
+      <div class="about-hero__content">
+        <span class="eyebrow">Our Story</span>
+        <h1 class="display-lg" id="about-title">
+          Photography as<br>a way of seeing.
+        </h1>
+        <div class="about-hero__body">
+          <p>
+            Luminary was founded in 2019 by a small collective of photographers who believed that a great image is more than a captured moment — it's a point of view, a decision, a conversation between the photographer and the world.
+          </p>
+          <p>
+            We curate photography across six themes: Nature, Travel, Animals, Architecture, and Technology. Every image in our gallery is selected not just for technical excellence, but for the story it carries and the emotion it provokes.
+          </p>
+          <p>
+            Our collection spans 18 countries and over 240 photographs. We work with emerging and established photographers alike, always with a single question in mind: does this image make you feel something?
+          </p>
+        </div>
+      </div>
+
+      <div class="about-hero__img">
+        <img
+          src="https://images.unsplash.com/photo-1604223190546-a43e4c7f29d7?w=700&h=880&fit=crop&auto=format"
+          alt="Layered mountain ridges glowing in golden hour light — signature image of the Luminary collection"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <!-- ====================================================
+         Stats Row
+    ===================================================== -->
+    <section class="stats-row" aria-label="Gallery statistics">
+      <div class="container">
+        <div class="stats-row__grid" role="list">
+          <div class="stat-item" role="listitem">
+            <div class="stat-item__num">240+</div>
+            <div class="stat-item__label">Curated photographs</div>
+          </div>
+          <div class="stat-item" role="listitem">
+            <div class="stat-item__num">18</div>
+            <div class="stat-item__label">Countries represented</div>
+          </div>
+          <div class="stat-item" role="listitem">
+            <div class="stat-item__num">6</div>
+            <div class="stat-item__label">Thematic categories</div>
+          </div>
+          <div class="stat-item" role="listitem">
+            <div class="stat-item__num">2019</div>
+            <div class="stat-item__label">Year founded</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         Values Section
+    ===================================================== -->
+    <section class="values-section" aria-labelledby="values-heading">
+      <div class="container">
+        <div class="values-section__header">
+          <span class="eyebrow" style="display:block; margin-bottom:12px;">What We Believe</span>
+          <h2 class="display-md" id="values-heading">Our Principles</h2>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-card__icon" aria-hidden="true">
+              <!-- Eye icon -->
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <h3 class="value-card__title">Intentional Curation</h3>
+            <p class="value-card__text">
+              Every photograph in our collection is selected by hand. We never use algorithmic ranking. Curation is an editorial act — it requires taste, judgment, and a genuine point of view.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon" aria-hidden="true">
+              <!-- Star icon -->
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h3 class="value-card__title">Excellence Over Volume</h3>
+            <p class="value-card__text">
+              We would rather show 16 extraordinary images than 160 ordinary ones. Restraint is a form of respect — for the photographer, for the subject, and for you.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon" aria-hidden="true">
+              <!-- Globe icon -->
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h3 class="value-card__title">Global Perspective</h3>
+            <p class="value-card__text">
+              Beauty is not regional. We actively seek photographers from underrepresented geographies and traditions, because the world is larger than any single vantage point.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon" aria-hidden="true">
+              <!-- Camera icon -->
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                <circle cx="12" cy="13" r="4"/>
+              </svg>
+            </div>
+            <h3 class="value-card__title">Respect for the Craft</h3>
+            <p class="value-card__text">
+              Photography is a discipline. We honour the technical mastery, physical effort, and creative risk that goes into every frame — amateur and professional alike.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon" aria-hidden="true">
+              <!-- Accessibility / heart icon -->
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h3 class="value-card__title">Open Access</h3>
+            <p class="value-card__text">
+              Great photography should not be locked behind paywalls. Luminary is free to browse — because visual culture belongs to everyone, not only those who can afford it.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-card__icon" aria-hidden="true">
+              <!-- Leaf / nature icon -->
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M17 8C8 10 5.9 16.17 3.82 22"/>
+                <path d="M17 8L21 4"/>
+                <path d="M17 8c0 0-5 4-11 6"/>
+              </svg>
+            </div>
+            <h3 class="value-card__title">Environmental Awareness</h3>
+            <p class="value-card__text">
+              Many of our images document landscapes and wildlife under threat. We donate 5% of all licensing revenue to conservation organisations working to protect these places.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         Team Section
+    ===================================================== -->
+    <section class="team-section" aria-labelledby="team-heading">
+      <div class="container">
+        <div class="team-section__header">
+          <span class="eyebrow" style="display:block; margin-bottom:12px;">The People</span>
+          <h2 class="display-md" id="team-heading">Behind the Lens</h2>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-card__avatar">
+              <img
+                src="https://images.unsplash.com/photo-1557008075-7f2c5efa4cfd?w=400&h=400&fit=crop&auto=format"
+                alt="Portrait photo symbolising team member Elena Hart"
+                loading="lazy"
+              />
+            </div>
+            <div class="team-card__name">Elena Hart</div>
+            <div class="team-card__role">Founder & Creative Director</div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-card__avatar">
+              <img
+                src="https://images.unsplash.com/photo-1612441804231-77a36b284856?w=400&h=400&fit=crop&auto=format"
+                alt="Portrait photo symbolising team member Marcos Silva"
+                loading="lazy"
+              />
+            </div>
+            <div class="team-card__name">Marcos Silva</div>
+            <div class="team-card__role">Head of Nature Photography</div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-card__avatar">
+              <img
+                src="https://images.unsplash.com/photo-1433769778268-24b797c4fc9a?w=400&h=400&fit=crop&auto=format"
+                alt="Portrait photo symbolising team member Yuki Tanaka"
+                loading="lazy"
+              />
+            </div>
+            <div class="team-card__name">Yuki Tanaka</div>
+            <div class="team-card__role">Travel & Architecture Editor</div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-card__avatar">
+              <img
+                src="https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?w=400&h=400&fit=crop&auto=format"
+                alt="Portrait photo symbolising team member Amara Osei"
+                loading="lazy"
+              />
+            </div>
+            <div class="team-card__name">Amara Osei</div>
+            <div class="team-card__role">Technology & Design Lead</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         CTA Band
+    ===================================================== -->
+    <section class="cta-band" aria-label="Call to action">
+      <div class="container">
+        <span class="eyebrow" style="display:block; margin-bottom:16px;">Explore the Collection</span>
+        <h2 class="display-md">Ready to be moved?</h2>
+        <p class="cta-band__sub">Browse 240+ curated photographs across six categories.</p>
+        <a href="gallery.html" class="btn btn-primary">Open Gallery</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================
+       Footer
+  ===================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">Luminary<span>.</span></span>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <span class="footer__copy">© 2026 Luminary Gallery</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Mobile nav toggle */
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("open");
+    }
+  </script>
+</body>
+</html>

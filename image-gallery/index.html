@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luminary Gallery — Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====================================================
+       Navigation
+  ===================================================== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a class="nav__logo" href="index.html">Luminary<span>.</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html" class="nav__cta">Explore</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <!-- ====================================================
+         Hero Section
+    ===================================================== -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__content container" style="padding-left:40px; padding-right:60px;">
+        <span class="eyebrow">Visual Storytelling</span>
+        <h1 class="display-xl hero__title">
+          Beautiful<br>moments,<br><em>captured.</em>
+        </h1>
+        <p class="hero__subtitle">
+          A curated collection of stunning photography spanning nature, travel, wildlife, architecture, and technology — each image a world unto itself.
+        </p>
+        <div class="hero__actions">
+          <a href="gallery.html" class="btn btn-primary">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            Browse Gallery
+          </a>
+          <a href="about.html" class="btn btn-outline">Our Story</a>
+        </div>
+        <div class="hero__stats" role="list">
+          <div class="hero__stat" role="listitem">
+            <div class="hero__stat-num">240+</div>
+            <div class="hero__stat-label">Photographs</div>
+          </div>
+          <div class="hero__stat" role="listitem">
+            <div class="hero__stat-num">6</div>
+            <div class="hero__stat-label">Categories</div>
+          </div>
+          <div class="hero__stat" role="listitem">
+            <div class="hero__stat-num">18</div>
+            <div class="hero__stat-label">Countries</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mosaic of 4 hero images -->
+      <div class="hero__mosaic" aria-hidden="true">
+        <div class="hero__mosaic-grid">
+          <div class="hero__mosaic-item">
+            <img src="https://images.unsplash.com/photo-1604223190546-a43e4c7f29d7?w=600&h=500&fit=crop&auto=format"
+                 alt="Layered mountain ridges at sunset" loading="lazy" />
+          </div>
+          <div class="hero__mosaic-item">
+            <img src="https://images.unsplash.com/photo-1557008075-7f2c5efa4cfd?w=600&h=500&fit=crop&auto=format"
+                 alt="Orange and silver fox in the wild" loading="lazy" />
+          </div>
+          <div class="hero__mosaic-item">
+            <img src="https://images.unsplash.com/photo-1433769778268-24b797c4fc9a?w=600&h=500&fit=crop&auto=format"
+                 alt="Colourful buildings in a European city" loading="lazy" />
+          </div>
+          <div class="hero__mosaic-item">
+            <img src="https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?w=600&h=500&fit=crop&auto=format"
+                 alt="Abstract blue technology illustration" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         Featured Section
+    ===================================================== -->
+    <section class="featured" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="featured__header">
+          <div>
+            <span class="eyebrow" style="display:block; margin-bottom:10px;">Editor's Pick</span>
+            <h2 class="display-md" id="featured-heading">Recently Featured</h2>
+          </div>
+          <a href="gallery.html" class="btn btn-outline">View All</a>
+        </div>
+
+        <div class="featured__grid">
+          <!-- Large card -->
+          <article class="card card--tall" onclick="location.href='gallery.html'" tabindex="0" role="button" aria-label="Open gallery image: Yosemite National Park">
+            <div class="card__img-wrap" style="aspect-ratio:16/10;">
+              <img src="https://images.unsplash.com/photo-1498429089284-41f8cf3ffd39?w=900&h=560&fit=crop&auto=format"
+                   alt="Snow-dusted granite cliffs and waterfall above Yosemite forest" loading="lazy" />
+            </div>
+            <div class="card__overlay">
+              <span class="card__category">Nature</span>
+              <span class="card__title">Yosemite Falls at Dawn</span>
+            </div>
+          </article>
+
+          <!-- Stack of 2 -->
+          <div style="display:flex; flex-direction:column; gap:20px;">
+            <article class="card" onclick="location.href='gallery.html'" tabindex="0" role="button" aria-label="Open gallery image: Tiger portrait">
+              <div class="card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1605092676920-8ac5ae40c7c8?w=500&h=340&fit=crop&auto=format"
+                     alt="Brown and black tiger in close up photography" loading="lazy" />
+              </div>
+              <div class="card__overlay">
+                <span class="card__category">Animals</span>
+                <span class="card__title">Bengal Tiger</span>
+              </div>
+            </article>
+            <article class="card" onclick="location.href='gallery.html'" tabindex="0" role="button" aria-label="Open gallery image: Curtain wall building">
+              <div class="card__img-wrap">
+                <img src="https://images.unsplash.com/photo-1462556791646-c201b8241a94?w=500&h=340&fit=crop&auto=format"
+                     alt="Low angle photo of curtain wall glass building" loading="lazy" />
+              </div>
+              <div class="card__overlay">
+                <span class="card__category">Technology</span>
+                <span class="card__title">Glass Reflection</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         Categories Section
+    ===================================================== -->
+    <section class="categories-section" aria-labelledby="cats-heading">
+      <div class="container">
+        <div class="categories-section__header">
+          <span class="eyebrow" style="display:block; margin-bottom:12px;">Browse By Theme</span>
+          <h2 class="display-md" id="cats-heading">Explore Categories</h2>
+          <p class="categories-section__subtitle">From mountain peaks to city streets — find your perspective.</p>
+        </div>
+
+        <div class="categories-grid">
+          <a href="gallery.html?cat=nature" class="category-card" aria-label="Browse Nature photos">
+            <img src="https://images.unsplash.com/photo-1612441804231-77a36b284856?w=400&h=560&fit=crop&auto=format"
+                 alt="Green mountains under blue sky" loading="lazy" />
+            <div class="category-card__overlay">
+              <span class="category-card__label">24 images</span>
+              <span class="category-card__name">Nature</span>
+            </div>
+          </a>
+          <a href="gallery.html?cat=travel" class="category-card" aria-label="Browse Travel photos">
+            <img src="https://images.unsplash.com/photo-1525095240410-9645dea911e4?w=400&h=560&fit=crop&auto=format"
+                 alt="Worm's eye view of high-rise buildings" loading="lazy" />
+            <div class="category-card__overlay">
+              <span class="category-card__label">32 images</span>
+              <span class="category-card__name">Travel</span>
+            </div>
+          </a>
+          <a href="gallery.html?cat=animals" class="category-card" aria-label="Browse Animals photos">
+            <img src="https://images.unsplash.com/photo-1544979590-37e9b47eb705?w=400&h=560&fit=crop&auto=format"
+                 alt="Brown and black leopard in the wild" loading="lazy" />
+            <div class="category-card__overlay">
+              <span class="category-card__label">18 images</span>
+              <span class="category-card__name">Animals</span>
+            </div>
+          </a>
+          <a href="gallery.html?cat=architecture" class="category-card" aria-label="Browse Architecture photos">
+            <img src="https://images.unsplash.com/photo-1554793000-245d3a3c2a51?w=400&h=560&fit=crop&auto=format"
+                 alt="Detailed view of a brown heritage building" loading="lazy" />
+            <div class="category-card__overlay">
+              <span class="category-card__label">21 images</span>
+              <span class="category-card__name">Architecture</span>
+            </div>
+          </a>
+          <a href="gallery.html?cat=technology" class="category-card" aria-label="Browse Technology photos">
+            <img src="https://images.unsplash.com/photo-1618172193763-c511deb635ca?w=400&h=560&fit=crop&auto=format"
+                 alt="Spiral of colorful abstract technology discs" loading="lazy" />
+            <div class="category-card__overlay">
+              <span class="category-card__label">15 images</span>
+              <span class="category-card__name">Technology</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         CTA Band
+    ===================================================== -->
+    <section class="cta-band" aria-label="Call to action">
+      <div class="container">
+        <span class="eyebrow" style="display:block; margin-bottom:16px;">Ready to Explore?</span>
+        <h2 class="display-md">Every image tells a story.</h2>
+        <p class="cta-band__sub">Dive into our full collection of curated photography.</p>
+        <a href="gallery.html" class="btn btn-primary">Open Gallery</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================
+       Footer
+  ===================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">Luminary<span>.</span></span>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <span class="footer__copy">© 2026 Luminary Gallery</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Mobile nav toggle */
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    /* Auto-close nav on link click */
+    document.querySelectorAll('.nav__links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+
+    /* Card keyboard accessibility: activate on Enter/Space */
+    document.querySelectorAll('.card[role="button"]').forEach(function(card) {
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

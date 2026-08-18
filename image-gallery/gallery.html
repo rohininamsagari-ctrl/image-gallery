@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luminary Gallery — Browse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====================================================
+       Navigation
+  ===================================================== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a class="nav__logo" href="index.html">Luminary<span>.</span></a>
+      <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html" class="nav__cta">Explore</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <!-- ====================================================
+         Gallery Header: Title + Search + Filters
+    ===================================================== -->
+    <section class="gallery-page-header" aria-labelledby="gallery-title">
+      <div class="container">
+
+        <div class="gallery-page-header__top">
+          <div class="gallery-page-header__text">
+            <span class="eyebrow" style="display:block; margin-bottom:10px;">The Collection</span>
+            <h1 class="display-md" id="gallery-title">Image Gallery</h1>
+            <p style="color:var(--fg-muted); margin-top:8px; font-size:0.9375rem;">
+              Explore beautiful moments and places
+            </p>
+          </div>
+
+          <!-- Search box -->
+          <div class="search-wrap" role="search">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input
+              type="search"
+              id="searchInput"
+              class="search-input"
+              placeholder="Search by title or category…"
+              aria-label="Search images by title or category"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="filter-bar" role="group" aria-label="Filter by category">
+          <button class="filter-btn active" data-cat="all" aria-pressed="true" onclick="setCategory('all')">All</button>
+          <button class="filter-btn" data-cat="nature" aria-pressed="false" onclick="setCategory('nature')">Nature</button>
+          <button class="filter-btn" data-cat="travel" aria-pressed="false" onclick="setCategory('travel')">Travel</button>
+          <button class="filter-btn" data-cat="animals" aria-pressed="false" onclick="setCategory('animals')">Animals</button>
+          <button class="filter-btn" data-cat="architecture" aria-pressed="false" onclick="setCategory('architecture')">Architecture</button>
+          <button class="filter-btn" data-cat="technology" aria-pressed="false" onclick="setCategory('technology')">Technology</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================
+         Gallery Grid
+    ===================================================== -->
+    <section class="gallery-section" aria-label="Image gallery">
+      <div class="container">
+        <p class="gallery-count" id="galleryCount" aria-live="polite" aria-atomic="true">16 images</p>
+        <div class="gallery-grid" id="galleryGrid" role="list">
+          <!-- Cards injected by script.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================
+       Lightbox
+  ===================================================== -->
+  <div
+    id="lightbox"
+    class="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Image lightbox"
+    tabindex="-1"
+  >
+    <div class="lightbox__backdrop" aria-hidden="true"></div>
+
+    <div class="lightbox__inner">
+      <!-- Main image area -->
+      <div class="lightbox__img-area">
+        <button class="lightbox__nav lightbox__nav--prev" onclick="showPrevImage()" aria-label="Previous image">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+
+        <img class="lightbox__img" src="" alt="" />
+
+        <button class="lightbox__nav lightbox__nav--next" onclick="showNextImage()" aria-label="Next image">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Sidebar info panel -->
+      <div class="lightbox__info">
+        <button class="lightbox__close" onclick="closeLightbox()" aria-label="Close lightbox">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+        <span class="lightbox__cat">Category</span>
+        <h2 class="lightbox__title">Image Title</h2>
+        <p class="lightbox__desc">Image description will appear here.</p>
+        <span class="lightbox__counter">1 / 16</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================
+       Footer
+  ===================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">Luminary<span>.</span></span>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <span class="footer__copy">© 2026 Luminary Gallery</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    /* Initialize gallery on page load */
+    document.addEventListener("DOMContentLoaded", initGallery);
+
+    /* Mobile nav toggle */
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("open");
+    }
+  </script>
+</body>
+</html>
